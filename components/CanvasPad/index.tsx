@@ -145,7 +145,7 @@
 
 
 "use client";
-//@ts-ignore
+//@ts-nocheck
 import React, { useEffect, useRef, useState, MouseEvent, forwardRef, useImperativeHandle } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearDrawParams } from '../../store/slices/drawWhiteboardSlice';
