@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { MuiColorInput } from 'mui-color-input'
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { styled } from 'styled-components'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { RootState } from "@/store/store";
+// import { RootState } from "@/store/store";
 import { addDrawParams, clearDrawParams } from "@/store/slices/drawWhiteboardSlice";
 
 const MuiColorInputStyled = styled(MuiColorInput)`
@@ -24,13 +24,15 @@ const ToolBar = () => {
     useEffect(() => {
         dispatch(addDrawParams({color: color, lineWidth: lineWidth}))
     }, [])
-
+    /* eslint-disable @typescript-eslint/no-explicit-any */
     const handleColorChange = (e: any) => {
+        /* eslint-enable @typescript-eslint/no-explicit-any */
         dispatch(addDrawParams({color: e, lineWidth: lineWidth}))
         setColor(e)
     }
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
     const linewidthHandle = (e: any) => {
+        /* eslint-enable @typescript-eslint/no-explicit-any */
         dispatch(addDrawParams({color: color, lineWidth: e.target.value}))
         setLineWidth(e.target.value)
     }
