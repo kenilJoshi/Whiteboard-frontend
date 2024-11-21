@@ -218,7 +218,10 @@ const CanvasPad = forwardRef<HTMLCanvasElement, CanvasPadProps>(
 
       // If imageData is available, draw it on the canvas
       if (imageData) {
+        /* eslint-disable @typescript-eslint/no-explicit-any */
         const img: any = new Image();
+        /* eslint-enable @typescript-eslint/no-explicit-any */
+
         img.onload = () => {
           // Draw the fetched image data onto the canvas
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
