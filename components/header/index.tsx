@@ -10,14 +10,14 @@ import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { deepOrange } from "@mui/material/colors";
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 interface DecodedToken extends JwtPayload {
   name?: string;
   email?: string;
   exp?: any;
   iat?: any;
 }
-
+/* eslint-enable @typescript-eslint/no-explicit-any */
 export function Header() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userDetails, setUserDetails] = useState<DecodedToken>({});
