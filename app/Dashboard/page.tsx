@@ -68,7 +68,7 @@ export default function Dashboard() {
         <div className="mb-5">
           {whiteboards.length > 0 ? (
             <ul className="space-y-2">
-              //@ts-ignore
+              //@ts-expect-error
               {whiteboards.map((board: any) => (
                 <li
                   key={board.id}
