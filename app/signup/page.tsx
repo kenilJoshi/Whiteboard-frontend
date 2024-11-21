@@ -49,7 +49,7 @@ export default function Register() {
   
     if (validateUser(user)) {
       try {
-        const signUpResponse = await axios.post("https://white-board-backend-hrmg17iik-kenils-projects-6796dca5.vercel.app/user/signup", user);
+        const signUpResponse = await axios.post("http://localhost:3008/user/signup", user);
         console.log(signUpResponse.data.data.token);
         if(signUpResponse.data.errCode === -1){
           const token = signUpResponse.data.data.token
