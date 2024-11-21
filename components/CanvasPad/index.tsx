@@ -145,7 +145,7 @@
 
 
 "use client";
-
+//@ts-ignore
 import React, { useEffect, useRef, useState, MouseEvent, forwardRef, useImperativeHandle } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearDrawParams } from '../../store/slices/drawWhiteboardSlice';
@@ -218,7 +218,6 @@ const CanvasPad = forwardRef<HTMLCanvasElement, CanvasPadProps>(
 
       // If imageData is available, draw it on the canvas
       if (imageData) {
-        //@ts-expect-error
         const img: any = new Image();
         img.onload = () => {
           // Draw the fetched image data onto the canvas
