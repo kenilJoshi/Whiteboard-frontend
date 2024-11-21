@@ -12,7 +12,7 @@ export default function Dashboard() {
   const [error, setError] = useState("");
   const [whiteboards, setWhiteboards] = useState([]); // State to store whiteboard list
   const router = useRouter();
-  const { user, token } = useSelector((state: RootState) => state.authUser);
+  const { token } = useSelector((state: RootState) => state.authUser);
 
   const handleAdd = () => {
     setIsPopupOpen(true);
@@ -54,8 +54,8 @@ export default function Dashboard() {
     }
     router.push(`/whiteBoard?name=${encodeURIComponent(name)}`);
   };
-
-  const openWhiteBoard = (board:any) =>{
+//@ts-ignore
+  const openWhiteBoard = (board: any) =>{
     router.push(`/whiteBoard?name=${board.name}&id=${board.id}`);
   }
 
@@ -68,6 +68,7 @@ export default function Dashboard() {
         <div className="mb-5">
           {whiteboards.length > 0 ? (
             <ul className="space-y-2">
+              //@ts-ignore
               {whiteboards.map((board: any) => (
                 <li
                   key={board.id}
