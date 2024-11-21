@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addUser } from '@/store/slices/authSlice';
 import { toast } from "react-toastify";
-import { RootState } from '@/store/store';
 import axios from 'axios';
 import Link from 'next/link';
 import "react-toastify/dist/ReactToastify.css";

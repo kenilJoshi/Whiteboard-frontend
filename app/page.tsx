@@ -6,7 +6,7 @@ import Cookies from "js-cookie";
 import Link from "next/link";
 
 export default function Home() {
-  const path = usePathname();
+  // const path = usePathname();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {

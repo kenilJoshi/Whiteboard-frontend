@@ -156,14 +156,14 @@ interface CanvasPadProps {
   canvasWidth: number;
   canvasHeight: number;
   socket: WebSocket | null;
-  whiteBoardId: any;
+  whiteBoardId: string | number;
 }
 
 const CanvasPad = forwardRef<HTMLCanvasElement, CanvasPadProps>(
   ({ canvasWidth, canvasHeight, socket, whiteBoardId }, ref) => {
-    const canvasRef = useRef<HTMLCanvasElement | any>(null);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
     const { color, lineWidth } = useSelector((state: RootState) => state.drawWhiteBoard.drawParams);
-    const { user, token } = useSelector((state: RootState) => state.authUser);
+    const { token } = useSelector((state: RootState) => state.authUser);
     const { clear } = useSelector((state: RootState) => state.drawWhiteBoard.clearParams);
     const { room } = useSelector((state: RootState) => state?.webSocket.room);
     const [isPainting, setIsPainting] = useState<boolean>(false);

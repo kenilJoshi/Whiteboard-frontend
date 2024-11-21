@@ -3,9 +3,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addUser } from '@/store/slices/authSlice';
-import { RootState } from '@/store/store';
+// import { RootState } from '@/store/store';
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
@@ -121,7 +121,7 @@ const Login: React.FC = () => {
           </div>
         </form>
         <p className="text-left">
-          Don't have an account?{' '}
+          Dont have an account?{' '}
           <Link href="/signup" className="text-blue-400">
             Create
           </Link>

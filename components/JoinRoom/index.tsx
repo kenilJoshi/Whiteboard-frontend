@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { joinRoom } from "@/store/slices/webSocketSlice";
-import { RootState } from "@/store/store";
+// import { RootState } from "@/store/store";
 
 interface JoinRoomType {
   show: any;
