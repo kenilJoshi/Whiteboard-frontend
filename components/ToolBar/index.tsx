@@ -19,7 +19,7 @@ const ToolBar = () => {
     const [color, setColor] = useState<string>("rgb(0, 0, 0)")
     const [lineWidth, setLineWidth] = useState(5)
     const dispatch = useDispatch()
-    const {drawParams, clearParams} = useSelector((state: RootState) => state.drawWhiteBoard)
+    // const {drawParams, clearParams} = useSelector((state: RootState) => state.drawWhiteBoard)
     
     useEffect(() => {
         dispatch(addDrawParams({color: color, lineWidth: lineWidth}))

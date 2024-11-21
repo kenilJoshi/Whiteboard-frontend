@@ -18,7 +18,7 @@ const Login: React.FC = () => {
   const [emailError, setEmailError] = useState<string>('');
   const [passwordError, setPasswordError] = useState<string>('');
   const dispatch = useDispatch()
-  const {user, token} = useSelector((state: RootState) => state.authUser)
+  // const {user, token} = useSelector((state: RootState) => state.authUser)
   const router = useRouter();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Login: React.FC = () => {
       try {
         const signUser = await axios.post('http://localhost:3008/user/signin', user);
         if(signUser.data.errCode === -1){
-          let token = signUser.data.data.token
+          // let token = signUser.data.data.token
           dispatch(addUser({user: {
             email: signUser.data.data.email || "",
             username: signUser.data.data.username || ""

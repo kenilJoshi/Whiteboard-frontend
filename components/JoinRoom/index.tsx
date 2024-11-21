@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { joinRoom } from "@/store/slices/webSocketSlice";
 import { RootState } from "@/store/store";
@@ -11,7 +11,7 @@ interface JoinRoomType {
 
 const JoinRoom = ({ show, onClose, socket }: JoinRoomType) => {
   const roomRef = useRef<HTMLInputElement>(null);
-  const {room} = useSelector((state: RootState) => state.webSocket)
+  // const {room} = useSelector((state: RootState) => state.webSocket)
   const dispatch = useDispatch()
   if (!show) return null;
 

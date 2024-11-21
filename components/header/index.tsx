@@ -23,7 +23,7 @@ export function Header() {
   const [userDetails, setUserDetails] = useState<DecodedToken>({});
   const [isScrolled, setIsScrolled] = useState(false); // State to track scroll position
   const dispatch = useDispatch();
-  const { user, token } = useSelector((state: RootState) => state.authUser);
+  // const { user, token } = useSelector((state: RootState) => state.authUser);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 

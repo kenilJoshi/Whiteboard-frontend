@@ -6,11 +6,16 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import axios from "axios";
 
+interface Whiteboard {
+  id?: string | number;
+  name?: string;
+}
+
 export default function Dashboard() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [name, setName] = useState("");
   const [error, setError] = useState("");
-  const [whiteboards, setWhiteboards] = useState([]); // State to store whiteboard list
+  const [whiteboards, setWhiteboards] = useState<Whiteboard[]>([]); // Use Whiteboard type
   const router = useRouter();
   const { token } = useSelector((state: RootState) => state.authUser);
 
@@ -54,10 +59,10 @@ export default function Dashboard() {
     }
     router.push(`/whiteBoard?name=${encodeURIComponent(name)}`);
   };
-//@ts-ignore
-  const openWhiteBoard = (board: any) =>{
+
+  const openWhiteBoard = (board: Whiteboard) => {
     router.push(`/whiteBoard?name=${board.name}&id=${board.id}`);
-  }
+  };
 
   return (
     <div className="p-5">
@@ -68,8 +73,7 @@ export default function Dashboard() {
         <div className="mb-5">
           {whiteboards.length > 0 ? (
             <ul className="space-y-2">
-              //@ts-expect-error
-              {whiteboards.map((board: any) => (
+              {whiteboards.map((board: Whiteboard) => (
                 <li
                   key={board.id}
                   onClick={() => openWhiteBoard(board)}

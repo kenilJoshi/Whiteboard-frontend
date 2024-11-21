@@ -27,7 +27,7 @@ export default function Register() {
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
-  const {user, token} = useSelector((state: RootState) => state.authUser)
+  // const {user, token} = useSelector((state: RootState) => state.authUser)
   const dispatch = useDispatch()
   const router = useRouter();
  
@@ -53,7 +53,7 @@ export default function Register() {
         const signUpResponse = await axios.post("http://localhost:3008/user/signup", user);
         console.log(signUpResponse.data.data.token);
         if(signUpResponse.data.errCode === -1){
-          let token = signUpResponse.data.data.token
+          const token = signUpResponse.data.data.token
           dispatch(addUser({user: {email: signUpResponse.data.data?.email || "", username: signUpResponse.data.data?.username || ""}, token: signUpResponse.data.data.token}))
           Cookies.set("token", token, {expires: 7})
           router.push("/");

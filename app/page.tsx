@@ -1,9 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Header } from "@/components/header";
 import { usePathname } from "next/navigation";
-import { ToastContainer } from "react-toastify";
 import Cookies from "js-cookie";
 import Link from "next/link";
 
@@ -19,8 +17,8 @@ export default function Home() {
     }
   }, []);
 
-  const isAuthPage =
-    path === "/signin" || path === "/signup" || path === "/whiteBoard";
+  // const isAuthPage =
+  //   path === "/signin" || path === "/signup" || path === "/whiteBoard";
 
   return (
     <div>
