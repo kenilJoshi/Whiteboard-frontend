@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import Cookies from "js-cookie";
 import Link from "next/link";
 
