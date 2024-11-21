@@ -218,7 +218,7 @@ const CanvasPad = forwardRef<HTMLCanvasElement, CanvasPadProps>(
 
       // If imageData is available, draw it on the canvas
       if (imageData) {
-        //@ts-ignore
+        //@ts-expect-error
         const img: any = new Image();
         img.onload = () => {
           // Draw the fetched image data onto the canvas
