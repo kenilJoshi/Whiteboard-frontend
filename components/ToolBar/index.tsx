@@ -30,7 +30,7 @@ const ToolBar = () => {
         dispatch(addDrawParams({color: e, lineWidth: lineWidth}))
         setColor(e)
     }
-    console.log("Kenil");
+    console.log("dkdkdk");
     
 /* eslint-disable @typescript-eslint/no-explicit-any */
     const linewidthHandle = (e: any) => {
