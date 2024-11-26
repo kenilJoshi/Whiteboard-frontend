@@ -29,7 +29,7 @@ export default function Register() {
   // const {user, token} = useSelector((state: RootState) => state.authUser)
   const dispatch = useDispatch()
   const router = useRouter();
- console.log("Kenil");
+ console.log();
  
   // Focus on name input when the component loads
   useEffect(() => {
