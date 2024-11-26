@@ -169,7 +169,8 @@ const CanvasPad = forwardRef<HTMLCanvasElement, CanvasPadProps>(
     const [isPainting, setIsPainting] = useState<boolean>(false);
     const [imageData, setImageData] = useState<ImageData | null>(null);
     const dispatch = useDispatch();
-
+    console.log("Kemil");
+    
     useImperativeHandle(ref, () => canvasRef.current);
 
     useEffect(() => {
