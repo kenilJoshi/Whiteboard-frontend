@@ -27,7 +27,7 @@ export default function Dashboard() {
     const fetchWhiteboards = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3009/whiteBoard/get-all-whiteboard",
+          "https://whiteboard-backend2.onrender.com/get-all-whiteboard",
           {
             headers: {
               Authorization: token,

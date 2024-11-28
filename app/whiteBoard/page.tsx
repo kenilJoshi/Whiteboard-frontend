@@ -610,7 +610,7 @@ const Page = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    const socket = new WebSocket("ws://localhost:8000/");
+    const socket = new WebSocket("wss://whiteboard-backend2.onrender.com/");
 
     console.log(searchParams.get("id"));
 
@@ -662,7 +662,7 @@ const Page = () => {
       if (searchParams.get("id") == null) {
         try {
           const saveImageData = await axios.post(
-            "http://localhost:3009/whiteBoard/save-whiteboard",
+            "https://whiteboard-backend2.onrender.com/whiteBoard/save-whiteboard",
             {
               name: params,
               imageData: dataURL,
@@ -684,7 +684,7 @@ const Page = () => {
       } else {
         try {
           const saveImageData = await axios.post(
-            "http://localhost:3009/whiteBoard/save-whiteboard",
+            "https://whiteboard-backend2.onrender.com/whiteBoard/save-whiteboard",
             {
               name: params,
               whiteBoardId: searchParams.get("id"),

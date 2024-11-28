@@ -179,7 +179,7 @@ const CanvasPad = forwardRef<HTMLCanvasElement, CanvasPadProps>(
         const getWhiteboard = async () => {
           try {
             const response = await axios.post(
-              "http://localhost:3009/whiteBoard/get-one-whiteboard",
+              "https://whiteboard-backend2.onrender.com/whiteBoard/get-one-whiteboard",
               {
                 whiteBoardId: whiteBoardId,
               },

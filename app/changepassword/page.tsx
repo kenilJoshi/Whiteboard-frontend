@@ -31,7 +31,7 @@ const ChangePassword: React.FC = () => {
     if (validate(otp, oldPassword, newPassword, email)) {
       try {
         const response = await axios.put(
-          "http://localhost:3009/user/changePassword",
+          "https://whiteboard-backend2.onrender.com/user/changePassword",
           { otp, oldPassword, newPassword, email } // Include email in the request
         );
         if (response) {

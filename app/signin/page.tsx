@@ -35,7 +35,7 @@ const Login: React.FC = () => {
 
     if (validateInfo(user)) {
       try {
-        const signUser = await axios.post('http://localhost:3009/user/signin', user);
+        const signUser = await axios.post('https://whiteboard-backend2.onrender.com/user/signin', user);
         if(signUser.data.errCode === -1){
           // let token = signUser.data.data.token
           dispatch(addUser({user: {
