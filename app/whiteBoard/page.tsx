@@ -662,7 +662,7 @@ const Page = () => {
       if (searchParams.get("id") == null) {
         try {
           const saveImageData = await axios.post(
-            "http://localhost:3008/whiteBoard/save-whiteboard",
+            "http://localhost:3009/whiteBoard/save-whiteboard",
             {
               name: params,
               imageData: dataURL,
@@ -684,7 +684,7 @@ const Page = () => {
       } else {
         try {
           const saveImageData = await axios.post(
-            "http://localhost:3008/whiteBoard/save-whiteboard",
+            "http://localhost:3009/whiteBoard/save-whiteboard",
             {
               name: params,
               whiteBoardId: searchParams.get("id"),

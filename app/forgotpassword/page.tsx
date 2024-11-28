@@ -19,7 +19,7 @@ const ForgotPassword: React.FC = () => {
 
         if (validate(email)) {
             try {
-                const response = await axios.put('http://localhost:3008/user/forgotPassword', { email });
+                const response = await axios.put('http://localhost:3009/user/forgotPassword', { email });
                 console.log(response);
                 router.push('/changepassword');
             } catch (error) {

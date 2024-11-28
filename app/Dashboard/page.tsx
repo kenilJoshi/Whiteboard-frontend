@@ -27,7 +27,7 @@ export default function Dashboard() {
     const fetchWhiteboards = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3008/whiteBoard/get-all-whiteboard",
+          "http://localhost:3009/whiteBoard/get-all-whiteboard",
           {
             headers: {
               Authorization: token,

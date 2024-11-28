@@ -179,7 +179,7 @@ const CanvasPad = forwardRef<HTMLCanvasElement, CanvasPadProps>(
         const getWhiteboard = async () => {
           try {
             const response = await axios.post(
-              "http://localhost:3008/whiteBoard/get-one-whiteboard",
+              "http://localhost:3009/whiteBoard/get-one-whiteboard",
               {
                 whiteBoardId: whiteBoardId,
               },
